@@ -2,7 +2,9 @@
 name: deploy to stRdsQuery-test
 
 # [push]. 이 워크플로는 코드를 리포지토리에 푸시할 때마다 실행됩니다.
-on: [push]
+push:   #On Push Event We need to take action
+    branches:  #Now we need to specify the branch name
+    - master   
 jobs:
   deploy_source:
     name: build and deploy lambda
@@ -13,7 +15,7 @@ jobs:
 #빌드가 시작될 때마다 Ubuntu를 새로 설치하게 됩니다. 뭔지 잘 모름
     runs-on: ubuntu-latest
     steps:
-    
+
 # actions/checkout@v1이 단계에서는 Github 리포지토리에서 코드를 확인합니다.
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
