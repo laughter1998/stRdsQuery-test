@@ -2,7 +2,7 @@ const http = require('http');
 const https = require('https');
 const AWS = require('aws-sdk');
 const mysql = require("./mysql.js");
-// 깃 테스트3
+// 깃 테스트4
 
 
 exports.handler =  async function(event, context) {
