@@ -10,3 +10,5 @@ aaa.js
 config.json
 package-lock.json
 serviceAccountKey.json
+
+*.csv
