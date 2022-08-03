@@ -2,9 +2,10 @@
 name: deploy to stRdsQuery-test
 
 # [push]. 이 워크플로는 코드를 리포지토리에 푸시할 때마다 실행됩니다.
-push:   #On Push Event We need to take action
-    branches:  #Now we need to specify the branch name
-    - master   
+on:
+    push:   #On Push Event We need to take action
+        branches:  #Now we need to specify the branch name
+        - main
 jobs:
   deploy_source:
     name: build and deploy lambda
